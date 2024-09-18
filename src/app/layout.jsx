@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 import Navbar from "./Layout/Navbar";
 import Footer from "./Layout/Footer";
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
                 <body className={`${geistMono.variable}`}>
                     <Navbar />
                     {children}
+                    <Analytics />
                     <Footer />
                 </body>
             </html>
