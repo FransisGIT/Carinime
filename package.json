@@ -1,22 +1,37 @@
 {
-  "name": "carinime",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.9"
-  },
-  "devDependencies": {
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.9"
-  }
+    "name": "carinime",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@next/bundle-analyzer": "^14.2.9",
+        "@phosphor-icons/react": "^2.1.7",
+        "class-variance-authority": "^0.7.0",
+        "clsx": "^2.1.1",
+        "framer-motion": "^11.5.4",
+        "jquery": "^3.7.1",
+        "lucide-react": "^0.439.0",
+        "magicui-cli": "^0.1.6",
+        "next": "14.2.9",
+        "react": "^18",
+        "react-dom": "^18",
+        "owl.carousel": "^2.3.4",
+        "react-owl-carousel": "^2.3.3",
+        "sharp": "^0.33.5",
+        "tailwind-merge": "^2.5.2",
+        "tailwindcss-animate": "^1.0.7"
+    },
+    "devDependencies": {
+        "daisyui": "^4.12.10",
+        "eslint": "^8",
+        "eslint-config-next": "14.2.9",
+        "postcss": "^8",
+        "tailwindcss": "^3.4.1",
+        "webpack": "^5.94.0"
+    }
 }

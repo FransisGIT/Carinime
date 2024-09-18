@@ -1,0 +1,10 @@
+{
+    "workbench.list.smoothScrolling": true,
+    "workbench.view.alwaysShowHeaderActions": false,
+    "workbench.editor.alwaysShowEditorActions": false,
+    "workbench.editor.centeredLayoutFixedWidth": false,
+    "errorLens.gutterIconsEnabled": false,
+    "errorLens.statusBarIconsEnabled": false,
+    "editor.indentSize": "tabSize",
+    "prettier.useTabs": false
+}
