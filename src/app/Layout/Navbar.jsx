@@ -69,43 +69,43 @@ export default function Navbar() {
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow bg-color-gradient1"
                         >
-                            <li className="text-xl">
+                            <li className="text-2xl text-white">
                                 <Link href="/">Home</Link>
                             </li>
-                            <li className="text-xl">
+                            <li className="text-2xl text-white">
                                 <Link href="/About">About</Link>
                             </li>
-                            <li className="text-xl">
+                            <li className="text-2xl text-white">
                                 <Link href="/Contact">Contact</Link>
                             </li>
                         </ul>
                         )}
                     </div>
-                    <Link href="/" className="btn btn-ghost text-xl">CARINIME</Link>
+                    <Link href="/" className="btn btn-ghost text-xl text-white">CARINIME</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li className="text-xl gap-3">
+                        <li className="text-xl gap-3 text-white">
                             <Link href="/">Home</Link>
                         </li>
-                        <li className="text-xl gap-3">
+                        <li className="text-xl gap-3 text-white">
                             <Link href="/About">About</Link>
                         </li>
-                        <li className="text-xl gap-3">
+                        <li className="text-xl gap-3 text-white">
                             <Link href="/Contact">Contact</Link>
                         </li>
                     </ul>
                 </div>
                 <div className="navbar-end mt-8">
-                    <div className="form-control mr-4">
+                    <div className="form-control mr-4 text-white">
                         <input
                             type="text"
                             ref={searchInputRef}
                             onKeyDown={handleSearch}
                             placeholder="Search Anime"
-                            className="input input-bordered lg:w-[300px] md:w-[290px] w-40 bg-test"
+                            className="input input-bordered lg:w-[300px] md:w-[290px] w-[10rem] bg-test text-white border-white"
                         />
-                        <MagnifyingGlass size={32} weight="bold" className="relative bottom-10 lg:ml-64 md:ml-60 ml-[120px]  cursor-pointer" onClick={handleSearch} />
+                        <MagnifyingGlass size={32} weight="bold" className="text-white relative bottom-10 lg:ml-64 md:ml-[240px] ml-[120px] cursor-pointer" onClick={handleSearch} />
                     </div>
                 </div>
             </div>

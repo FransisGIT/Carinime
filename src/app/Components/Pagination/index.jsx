@@ -45,7 +45,7 @@ export default function Pagination({ page, lastPage, setPage }) {
             <div className="join">
                 {page <= 1 ? null :
                     <button
-                        className="join-item btn bg-color-gradient1"
+                        className="join-item btn text-white"
                         onClick={goToFirstPage}
                         disabled={page <= 1}
                     >
@@ -54,19 +54,19 @@ export default function Pagination({ page, lastPage, setPage }) {
                 }
                 {page <= 1 ? null :
                     <button
-                        className="join-item btn bg-color-gradient1"
+                        className="join-item btn text-white"
                         onClick={prevPage}
                         disabled={page <= 1}
                     >
                         «
                     </button>
                 }
-                <button className="join-item btn bg-color-gradient1">
+                <button className="join-item btn text-white">
                     {page} Page {lastPage}
                 </button>
                 {page >= lastPage ? null :
                     <button
-                        className="join-item btn bg-color-gradient1"
+                        className="join-item btn text-white"
                         onClick={nextPage}
                         disabled={page >= lastPage}
                     >
@@ -75,7 +75,7 @@ export default function Pagination({ page, lastPage, setPage }) {
                 }
                 {page >= lastPage ? null :
                     <button
-                        className="join-item btn bg-color-gradient1"
+                        className="join-item btn text-white"
                         onClick={goToLastPage}
                         disabled={page >= lastPage}
                     >

@@ -14,38 +14,53 @@ export default async function DetailAnime({ params: { id } }) {
 
                 <div className="flex flex-col col-span-2 lg:flex-row m-5 gap-5">
                     <div className="flex-none lg:w-[20%] md:w-[30%] w-full relative lg:mt-[-100px] md:mt-[-100px] mt-[-350px] m-auto">
-                        <Image src={detailAnime.data.images.webp.image_url} alt={detailAnime.data.title} height={350} width={350} className="w-52 m-auto rounded-[18px] hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300"></Image>
+                        <Image src={detailAnime.data.images.webp.large_image_url} alt={detailAnime.data.title} height={350} width={350} className="w-52 m-auto rounded-[18px] hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300"></Image>
                     </div>
                     <div className="flex-none lg:max-w-[80%]">
-                        <h1 className="text-2xl font-bold text-white mb-5 hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300">{detailAnime.data.title}</h1>
-                        <div className="flex flex-wrap gap-4 my-4">
-                            <div className="bg-color-gradient1 rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
-                                <div className="flex items-center text-white">
-                                    Score: {detailAnime.data.score}
+                        <h1 className="lg:text-3xl md:text-3xl sm:text-3xl text-3xl font-bold text-white mb-5 hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 lg:flex lg:justify-start text-center">{detailAnime.data.title}</h1>
+                        <div className="flex flex-wrap gap-4 my-4 justify-center items-center lg:flex lg:justify-start">
+                            {detailAnime.data.score ?
+                                <div className="bg-color-gradient1 rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
+                                    <div className="flex items-center text-white">
+                                        Score: {detailAnime.data.score}
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="bg-color-gradient1 rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
-                                <div className="flex items-center text-white">
-                                    Rank: {detailAnime.data.rank}
+                                : null
+                            }
+                            {detailAnime.data.rank ?
+                                <div className="bg-color-gradient1 rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
+                                    <div className="flex items-center text-white">
+                                        Rank: {detailAnime.data.rank}
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="bg-color-gradient1 rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
-                                <div className="flex items-center text-white">
-                                    Popularity: {detailAnime.data.popularity}
+                                : null
+                            }
+                            {detailAnime.data.popularity ?
+                                <div className="bg-color-gradient1 rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
+                                    <div className="flex items-center text-white">
+                                        Popularity: {detailAnime.data.popularity}
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="bg-color-gradient1 rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
-                                <div className="flex items-center text-white">
-                                    Scored By: {detailAnime.data.scored_by}
+                                : null
+                            }
+                            {detailAnime.data.scored_by ?
+                                <div className="bg-color-gradient1 rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
+                                    <div className="flex items-center text-white">
+                                        Scored By: {detailAnime.data.scored_by}
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="bg-color-gradient1 rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
-                                <div className="flex items-center text-white">
-                                    Favorite: {detailAnime.data.favorites}
+                                : null
+                            }
+                            {detailAnime.data.favorites ?
+                                <div className="bg-color-gradient1 rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
+                                    <div className="flex items-center text-white">
+                                        Favorite: {detailAnime.data.favorites}
+                                    </div>
                                 </div>
-                            </div>
+                                : null
+                            }
                         </div>
-                        <p className="lg:text-md text-white text-sm hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300">{detailAnime.data.synopsis}</p>
+                        <p className=" text-white hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 text-base">{detailAnime.data.synopsis}</p>
                     </div>
                 </div>
 
@@ -53,41 +68,41 @@ export default async function DetailAnime({ params: { id } }) {
                     <div className="flex-none lg:w-[20%] md:w-full w-full">
                         <div className="bg-color-gradient1 rounded-[18px] py-3">
                             <div className="flex flex-row lg:flex-wrap lg:flex-col flex-initial overflow-x-auto m-5 gap-3">
-                                <div className="font-bold text-sm lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
+                                <div className="font-bold text-base lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
                                     Rating <br />
                                     <span className="font-light text-white text-sm lg:text-lg">{detailAnime.data.rating}</span>
                                 </div>
-                                <div className="font-bold text-sm lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
+                                <div className="font-bold text-base lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
                                     Format <br />
-                                    <span className="font-light text-white text-sm lg:text-lg">{detailAnime.data.type}</span>
+                                    <span className="font-light text-white text-base lg:text-lg">{detailAnime.data.type}</span>
                                 </div>
-                                <div className="font-bold text-sm lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
+                                <div className="font-bold text-base lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
                                     Episodes <br />
-                                    <span className="font-light text-white text-sm lg:text-lg">{detailAnime.data.episodes}</span>
+                                    <span className="font-light text-white text-base lg:text-lg">{detailAnime.data.episodes}</span>
                                 </div>
-                                <div className="font-bold text-sm lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
+                                <div className="font-bold text-base lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
                                     Episode Duration <br />
-                                    <span className="font-light text-white text-sm lg:text-lg">{detailAnime.data.duration}</span>
+                                    <span className="font-light text-white text-base lg:text-lg">{detailAnime.data.duration}</span>
                                 </div>
-                                <div className="font-bold text-sm lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
+                                <div className="font-bold text-base lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
                                     Status <br />
-                                    <span className="font-light text-white text-sm lg:text-lg">{detailAnime.data.status}</span>
+                                    <span className="font-light text-white text-base lg:text-lg">{detailAnime.data.status}</span>
                                 </div>
-                                <div className="font-bold text-sm lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
+                                <div className="font-bold text-base lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
                                     Aired <br />
-                                    <span className="font-light text-white text-sm lg:text-lg">{detailAnime.data.aired?.string}</span>
+                                    <span className="font-light text-white text-base lg:text-lg">{detailAnime.data.aired?.string}</span>
                                 </div>
-                                <div className="font-bold text-sm lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
+                                <div className="font-bold text-base lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
                                     Season <br />
-                                    <span className="font-light text-white text-sm lg:text-lg">{detailAnime.data.season}</span>
+                                    <span className="font-light text-white text-base lg:text-lg">{detailAnime.data.season}</span>
                                 </div>
-                                <div className="font-bold text-sm lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
+                                <div className="font-bold text-base lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
                                     Studios <br />
-                                    <span className="font-light text-white text-sm lg:text-lg">{detailAnime.data.studios?.[0].name}</span>
+                                    <span className="font-light text-white text-base lg:text-lg">{detailAnime.data.studios?.[0].name}</span>
                                 </div>
 
 
-                                <div className="font-bold text-sm lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
+                                <div className="font-bold text-base lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
                                     Producers <br />
                                     <span className="font-light text-white flex lg:flex-wrap lg:flex gap-2">
                                         {detailAnime.data.producers.map((data, index) => (
@@ -107,8 +122,8 @@ export default async function DetailAnime({ params: { id } }) {
                                 </div>
 
 
-                                <div className="font-bold text-sm lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
-                                Title Japanese <br />
+                                <div className="font-bold text-base lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
+                                    Title Japanese <br />
                                     <span className="font-light text-white text-sm lg:text-lg">{detailAnime.data.title_japanese}</span>
                                 </div>
                             </div>
@@ -117,7 +132,7 @@ export default async function DetailAnime({ params: { id } }) {
                     <div className="flex-initial lg:max-w-[80%]">
                         <div className="flex flex-col col-span-2 lg:flex-row gap-5">
                             <div>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     {detailChar.data?.map((char) => {
                                         const japaneseVoiceActor = char.voice_actors?.find(actor => actor.language === 'Japanese');
 
@@ -132,12 +147,12 @@ export default async function DetailAnime({ params: { id } }) {
                                                                 alt={char.character.name}
                                                                 height={64}
                                                                 width={64}
-                                                                className="w-10 lg:w-20 lg:h-28 h-16 object-cover"
+                                                                className="w-28 lg:w-24 lg:h-24 h-28 object-cover"
                                                             />
                                                         )}
                                                         <div className="text-start">
-                                                            <p className="font-semibold hover:text-sky-600 text-white lg:text-lg text-xs">{char.character?.name || 'Unknown Character'}</p>
-                                                            <p className="text-sm text-gray-500">{char.role}</p>
+                                                            <p className="font-semibold hover:text-sky-600 text-white lg:text-lg text-base">{char.character?.name || 'Unknown Character'}</p>
+                                                            <p className="text-base text-gray-300">{char.role}</p>
                                                         </div>
                                                     </div>
                                                 </Link>
@@ -145,8 +160,8 @@ export default async function DetailAnime({ params: { id } }) {
                                                 <Link href={japaneseVoiceActor.person.url}>
                                                     <div className="flex items-center gap-4">
                                                         <div className="text-end">
-                                                            <p className="font-semibold hover:text-sky-600 text-white lg:text-lg text-xs">{japaneseVoiceActor.person?.name || 'Unknown Seiyuu'}</p>
-                                                            <p className="text-sm text-gray-500">{japaneseVoiceActor.language || 'Unknown'}</p>
+                                                            <p className="font-semibold hover:text-sky-600 text-white lg:text-lg text-base">{japaneseVoiceActor.person?.name || 'Unknown Seiyuu'}</p>
+                                                            <p className="text-base text-gray-300">{japaneseVoiceActor.language || 'Unknown'}</p>
                                                         </div>
                                                         {japaneseVoiceActor.person?.images?.jpg?.image_url && (
                                                             <Image
@@ -154,7 +169,7 @@ export default async function DetailAnime({ params: { id } }) {
                                                                 alt={japaneseVoiceActor.person.name || "Image Not Found"}
                                                                 height={64}
                                                                 width={64}
-                                                                className="w-10 lg:w-20 lg:h-28 h-16 object-cover"
+                                                                className="w-28 lg:w-24 lg:h-24 h-28 object-cover"
                                                             />
                                                         )}
                                                     </div>

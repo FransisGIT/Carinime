@@ -7,15 +7,17 @@ export default function Contact() {
             <div className="h-full py-[110px]">
                 <div className="py-5 px-5 lg:mx-[300px] mx-[20px] bg-color-gradient1 rounded-[24px]">
                     <div className="m-auto text-lg text-white font-semibold text-center">
-                        A simple user friendly website for searching Anime List like <Link className="text-blue-500" href="https://myanimelist.net/">MyAnimeList</Link> website, Using <Link className="text-blue-500" href="https://jikan.moe/">Jikan API </Link>
-                        Built with
+                        My social media
                     </div>
-                    <div className="gap-3 flex flex-row justify-center items-center">
-                        <Link href="https://nextjs.org/">
-                            <Image src={'/nextjs.png'} className="w-24 hover:scale-125 transition-all" alt="nextjs" width={350} height={350}></Image>
+                    <div className="flex flex-row justify-center items-center">
+                        <Link href="https://facebook.com/AverangeFransis">
+                            <Image src={'/facebook.webp'} className="w-[80px] hover:scale-125 transition-all" alt="nextjs" width={350} height={350}></Image>
                         </Link>
-                        <Link href="https://tailwindcss.com/">
-                            <Image src={'/tailwind.png'} className="w-20 hover:scale-125 transition-all" alt="tailwind" width={350} height={350}></Image>
+                        <Link href="https://wa.link/ldjbp9">
+                            <Image src={'/whatsapp.png'} className="w-[67px] hover:scale-125 transition-all" alt="whatsapp" width={350} height={350}></Image>
+                        </Link>
+                        <Link href="https://instagram.com/fransisco.in">
+                            <Image src={'/instagram.webp'} className="w-[105px] hover:scale-125 transition-all ml-[-5px]" alt="tailwind" width={350} height={350}></Image>
                         </Link>
                     </div>
                 </div>

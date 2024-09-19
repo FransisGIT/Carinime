@@ -8,12 +8,12 @@ export default function AnimeUpcoming({ api }) {
     return (
         <div>
             <>
-                <SparklesText text="Top Upcoming Anime" className="ml-4 mt-1 mb-6 lg:text-lg text-sm hover:text-indigo-500 transition-all text-white"></SparklesText>
+                <SparklesText text="Top Upcoming Anime" className="ml-4 mt-1 mb-6 lg:text-lg md:text-2xl sm:text-lg text-lg hover:text-indigo-500 transition-all text-white"></SparklesText>
                 {api.data?.map((data) => (
                     <Link href={`/DetailAnime/${data.mal_id}`} key={data.mal_id}>
                         <div className="flex ml-4 mb-5">
                             <Image
-                                src={data.images.webp.image_url || '../../public/not-found-img.jpg'
+                                src={data.images.webp.large_image_url || '../../public/not-found-img.jpg'
                                 }
                                 className="w-[70px] hover:shadow-2xl hover:shadow-indigo-500 transition-all duration-300 rounded-[12px] h-24"
                                 alt={data.title}

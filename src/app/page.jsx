@@ -22,7 +22,7 @@ export default async function Page() {
                          api={animeRecommend} />
                     </div>
                     <div className="flex-initial m-1 lg:max-w-[30%] max-w-full">
-                        <div className="bg-color-gradient1 sticky top-32 py-5 px-0 rounded-xl border-sm-1 overflow-y-auto max-h-[30rem] justify-end">
+                        <div className="bg-color-gradient1 sticky top-32 py-5 px-0 rounded-xl border-sm-1 overflow-y-auto max-h-[30rem] mx-5">
                             <AnimeUpcoming api={animeUpcoming} />
                         </div>
                     </div>
