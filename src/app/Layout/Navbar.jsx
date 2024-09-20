@@ -51,7 +51,7 @@ export default function Navbar() {
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-5 w-5"
+                                className="h-5 w-5 text-white"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -103,7 +103,7 @@ export default function Navbar() {
                             ref={searchInputRef}
                             onKeyDown={handleSearch}
                             placeholder="Search Anime"
-                            className="input input-bordered lg:w-[300px] md:w-[290px] w-[10rem] bg-test text-white border-white"
+                            className="input input-bordered lg:w-[300px] md:w-[290px] w-[10rem] bg-test text-whiteborder-white [&.active]:text-white active: focus:text-white"
                         />
                         <MagnifyingGlass size={32} weight="bold" className="text-white relative bottom-10 lg:ml-64 md:ml-[240px] ml-[120px] cursor-pointer" onClick={handleSearch} />
                     </div>

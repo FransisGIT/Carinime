@@ -147,11 +147,11 @@ export default async function DetailAnime({ params: { id } }) {
                                                                 alt={char.character.name}
                                                                 height={64}
                                                                 width={64}
-                                                                className="w-28 lg:w-24 lg:h-24 h-28 object-cover"
+                                                                className="w-24 lg:w-24 lg:h-24 h-24 object-cover"
                                                             />
                                                         )}
                                                         <div className="text-start">
-                                                            <p className="font-semibold hover:text-sky-600 text-white lg:text-lg text-base">{char.character?.name || 'Unknown Character'}</p>
+                                                            <p className="font-semibold hover:text-sky-600 text-white lg:text-lg text-sm">{char.character?.name || 'Unknown Character'}</p>
                                                             <p className="text-base text-gray-300">{char.role}</p>
                                                         </div>
                                                     </div>
@@ -160,7 +160,7 @@ export default async function DetailAnime({ params: { id } }) {
                                                 <Link href={japaneseVoiceActor.person.url}>
                                                     <div className="flex items-center gap-4">
                                                         <div className="text-end">
-                                                            <p className="font-semibold hover:text-sky-600 text-white lg:text-lg text-base">{japaneseVoiceActor.person?.name || 'Unknown Seiyuu'}</p>
+                                                            <p className="font-semibold hover:text-sky-600 text-white lg:text-lg text-sm">{japaneseVoiceActor.person?.name || 'Unknown Seiyuu'}</p>
                                                             <p className="text-base text-gray-300">{japaneseVoiceActor.language || 'Unknown'}</p>
                                                         </div>
                                                         {japaneseVoiceActor.person?.images?.jpg?.image_url && (
@@ -169,7 +169,7 @@ export default async function DetailAnime({ params: { id } }) {
                                                                 alt={japaneseVoiceActor.person.name || "Image Not Found"}
                                                                 height={64}
                                                                 width={64}
-                                                                className="w-28 lg:w-24 lg:h-24 h-28 object-cover"
+                                                                className="w-24 lg:w-24 lg:h-24 h-24 object-cover"
                                                             />
                                                         )}
                                                     </div>

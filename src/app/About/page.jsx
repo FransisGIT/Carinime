@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function About() {
     return (
-        <div className="h-screen flex justify-center items-center bg-[#292232]">
+        <div className="h-full py-[110px]">
             <div className="bg-color-gradient1 rounded-[24px] m-10 p-10 max-w-xl text-center">
                 <div className="text-lg text-white font-semibold">
                     A simple user-friendly website for searching Anime Lists like <Link className="text-blue-500" href="https://myanimelist.net/">MyAnimeList</Link> website, using the <Link className="text-blue-500" href="https://jikan.moe/">Jikan API</Link>. Built with:

@@ -30,7 +30,7 @@ export default function AnimeRecommend({ api }) {
                                         alt={data.title || 'Anime Image'}
                                         width={350}
                                         height={350}
-                                        className="w-full lg:max-h-60 md:max-h-[500px] sm:max-h-[500px] max-h-[500px] object-cover rounded-[24px]"
+                                        className="w-full lg:h-60 md:h-[500px] sm:h-[500px] h-[500px] object-cover rounded-[24px]"
                                     />
 
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 z-10 rounded-[18px]">
