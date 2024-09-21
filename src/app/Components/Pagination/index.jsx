@@ -45,41 +45,41 @@ export default function Pagination({ page, lastPage, setPage }) {
             <div className="join">
                 {page <= 1 ? null :
                     <button
-                        className="join-item btn text-white bg-gray-700"
+                        className="join-item btn bg-gray-700 border-none"
                         onClick={goToFirstPage}
                         disabled={page <= 1}
                     >
-                        ⏪ Start Page
+                        ⏪ <span className="text-white">Start Page</span>
                     </button>
                 }
                 {page <= 1 ? null :
                     <button
-                        className="join-item btn text-white bg-gray-700"
+                        className="join-item btn bg-gray-700 border-none"
                         onClick={prevPage}
                         disabled={page <= 1}
                     >
-                        «
+                        <span className="text-white">«</span>
                     </button>
                 }
-                <button className="join-item btn text-white bg-gray-700">
-                    {page} Page {lastPage}
+                <button className="join-item btn bg-gray-700 border-none">
+                    <span className="text-white">{page} Page {lastPage}</span>
                 </button>
                 {page >= lastPage ? null :
                     <button
-                        className="join-item btn text-white bg-gray-700"
+                        className="join-item btn bg-gray-700 border-none"
                         onClick={nextPage}
                         disabled={page >= lastPage}
                     >
-                        »
+                        <span className="text-white">»</span>
                     </button>
                 }
                 {page >= lastPage ? null :
                     <button
-                        className="join-item btn text-white bg-gray-700"
+                        className="join-item btn bg-gray-700 border-none"
                         onClick={goToLastPage}
                         disabled={page >= lastPage}
                     >
-                        Last Page ⏩
+                        <span className="text-white">Last Page</span> ⏩
                     </button>
                 }
             </div>

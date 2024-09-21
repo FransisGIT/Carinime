@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 
@@ -25,7 +24,7 @@ export default function AnimeRecommend({ api }) {
                             >
                                 <div className="relative group hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300 rounded-[18px]">
                                     {/* Image */}
-                                    <Image
+                                    <img
                                         src={data.images.webp.large_image_url || '../../../../public/not-found-img.jpg'}
                                         alt={data.title || 'Anime Image'}
                                         width={350}
