@@ -81,7 +81,7 @@ export default function Navbar() {
                         </ul>
                         )}
                     </div>
-                    <Link href="/" className="btn btn-ghost text-xl text-white">CARINIME</Link>
+                    <Link href="/" className="btn btn-ghost lg:text-xl lg:text-md text-sm text-white">CARINIME</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

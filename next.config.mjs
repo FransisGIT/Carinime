@@ -3,6 +3,11 @@ import webpack from 'webpack';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    // Disabling source maps for faster builds in development
+    productionBrowserSourceMaps: false,
+    // Disable font optimization to speed up development builds
+    optimizeFonts: false,
+
     images: {
         remotePatterns: [
             {

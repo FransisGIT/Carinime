@@ -15,7 +15,7 @@ export default function AnimeRecommend({ api }) {
     return (
         <>
             <div className="rounded-xl">
-                <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-2 px-4">
+                <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3 px-4">
                     {animeList?.map((anime) => (
                         (anime.entry).map((data) => (
                             <Link
@@ -26,18 +26,18 @@ export default function AnimeRecommend({ api }) {
                                 <div className="relative group hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300 rounded-[18px]">
                                     {/* Image */}
                                     <Image
-                                        src={data.images.webp.large_image_url || '../../public/not-found-img.jpg'}
+                                        src={data.images.webp.large_image_url || '../../../../public/not-found-img.jpg'}
                                         alt={data.title || 'Anime Image'}
                                         width={350}
                                         height={350}
-                                        className="w-full lg:h-60 md:h-[500px] sm:h-[500px] h-[500px] object-cover rounded-[24px]"
+                                        className="w-full lg:min-h-52 md:min-h-52 sm:min-h-52 min-h-52 object-cover rounded-[24px]"
                                     />
 
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 z-10 rounded-[18px]">
+                                    <div className="a   bsolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 z-10 rounded-[18px]">
                                     </div>
 
                                     <div className="absolute bottom-0 left-0 w-full p-2 z-20 text-center">
-                                        <p className="text-center font-bold md:text-sm text-xs text-white text-shadow-costum">
+                                        <p className="text-center font-bold md:text-sm text-sm text-white text-shadow-costum">
                                             {data.title}
                                         </p>
                                     </div>

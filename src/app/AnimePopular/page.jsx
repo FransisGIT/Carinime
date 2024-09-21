@@ -26,7 +26,7 @@ export default function AnimePopular() {
     return (
         <>
             <div className="pb-5">
-                <div className="grid md:grid-cols-7 sm:grid-cols-3 grid-cols-2 gap-2 px-4">
+                <div className="grid md:grid-cols-7 sm:grid-cols-3 grid-cols-2 gap-3 px-4">
                     {topAnime.data?.map((data) => (
                         <Link
                             href={`/DetailAnime/${data.mal_id}`}
@@ -34,13 +34,13 @@ export default function AnimePopular() {
                             key={data.mal_id}
                         >
                             <div className="relative group hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300 rounded-[18px]">
-                                {/* Image */}
-                                <Image
-                                    src={data.images.webp.large_image_url || '../../public/not-found-img.jpg'}
+
+                                <img
+                                    src={data.images.webp.large_image_url || '../../../../public/not-found-img.jpg'}
                                     alt={data.title || 'Anime Image'}
                                     width={350}
                                     height={350}
-                                    className="w-full lg:h-60 md:h-[500px] sm:h-[500px] h-[500px] object-cover rounded-[24px]"
+                                    className="w-full lg:min-h-52 md:min-h-52 sm:min-h-52 min-h-52 object-cover rounded-[24px]"
                                 />
 
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-100 z-10 rounded-[18px]">

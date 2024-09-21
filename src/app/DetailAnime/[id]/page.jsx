@@ -10,7 +10,10 @@ export default async function DetailAnime({ params: { id } }) {
     return (
         <>
             <div className="pb-10">
-                <div className="h-[350px] bg-white bg-cover bg-center relative md:mb-0 mb-56" style={{ backgroundImage: `url(${detailAnime.data.images.jpg.large_image_url})` }}></div>
+                <div className="h-[350px] bg-white bg-cover bg-center relative md:mb-0 mb-56" style={{ backgroundImage: `url(${detailAnime.data.images.jpg.large_image_url})` }}>
+                    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                </div>
+
 
                 <div className="flex flex-col col-span-2 lg:flex-row m-5 gap-5">
                     <div className="flex-none lg:w-[20%] md:w-[30%] w-full relative lg:mt-[-100px] md:mt-[-100px] mt-[-350px] m-auto">
@@ -20,7 +23,7 @@ export default async function DetailAnime({ params: { id } }) {
                         <h1 className="lg:text-3xl md:text-3xl sm:text-3xl text-3xl font-bold text-white mb-5 hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 lg:flex lg:justify-start text-center">{detailAnime.data.title}</h1>
                         <div className="flex flex-wrap gap-4 my-4 justify-center items-center lg:flex lg:justify-start">
                             {detailAnime.data.score ?
-                                <div className="bg-color-gradient1 rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
+                                <div className="bg-blue-navy rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
                                     <div className="flex items-center text-white">
                                         Score: {detailAnime.data.score}
                                     </div>
@@ -28,7 +31,7 @@ export default async function DetailAnime({ params: { id } }) {
                                 : null
                             }
                             {detailAnime.data.rank ?
-                                <div className="bg-color-gradient1 rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
+                                <div className="bg-blue-navy rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
                                     <div className="flex items-center text-white">
                                         Rank: {detailAnime.data.rank}
                                     </div>
@@ -36,7 +39,7 @@ export default async function DetailAnime({ params: { id } }) {
                                 : null
                             }
                             {detailAnime.data.popularity ?
-                                <div className="bg-color-gradient1 rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
+                                <div className="bg-blue-navy rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
                                     <div className="flex items-center text-white">
                                         Popularity: {detailAnime.data.popularity}
                                     </div>
@@ -44,7 +47,7 @@ export default async function DetailAnime({ params: { id } }) {
                                 : null
                             }
                             {detailAnime.data.scored_by ?
-                                <div className="bg-color-gradient1 rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
+                                <div className="bg-blue-navy rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
                                     <div className="flex items-center text-white">
                                         Scored By: {detailAnime.data.scored_by}
                                     </div>
@@ -52,7 +55,7 @@ export default async function DetailAnime({ params: { id } }) {
                                 : null
                             }
                             {detailAnime.data.favorites ?
-                                <div className="bg-color-gradient1 rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
+                                <div className="bg-blue-navy rounded-[18px] p-3 hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300">
                                     <div className="flex items-center text-white">
                                         Favorite: {detailAnime.data.favorites}
                                     </div>
@@ -66,7 +69,7 @@ export default async function DetailAnime({ params: { id } }) {
 
                 <div className="flex flex-col col-span-2 lg:flex-row m-5 gap-5 mt-10">
                     <div className="flex-none lg:w-[20%] md:w-full w-full">
-                        <div className="bg-color-gradient1 rounded-[18px] py-3">
+                        <div className="bg-blue-navy rounded-[18px] py-3">
                             <div className="flex flex-row lg:flex-wrap lg:flex-col flex-initial overflow-x-auto m-5 gap-3">
                                 <div className="font-bold text-base lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
                                     Rating <br />
@@ -113,7 +116,7 @@ export default async function DetailAnime({ params: { id } }) {
                                                 >
                                                     {data.name}
                                                     {index < detailAnime.data.producers.length - 1 && (
-                                                        <span className="">,</span>
+                                                        <span>,</span>
                                                     )}
                                                 </Link>
                                             </React.Fragment>
@@ -138,12 +141,12 @@ export default async function DetailAnime({ params: { id } }) {
 
                                         if (!japaneseVoiceActor) return null;
                                         return (
-                                            <div className="flex items-center justify-between p-0 bg-color-gradient1 rounded-md gap-5 mx-5 hover:shadow-lg hover:scale-105 hover:shadow-indigo-500 transition-all duration-300" key={char.character?.mal_id}>
+                                            <div className="flex items-center justify-between p-0 bg-blue-navy rounded-md gap-5 mx-5 hover:shadow-lg hover:scale-105 hover:shadow-indigo-500 transition-all duration-300" key={char.character?.mal_id}>
                                                 <Link href={char.character.url}>
                                                     <div className="flex items-center gap-4">
                                                         {char.character?.images.webp.image_url && (
                                                             <Image
-                                                                src={char.character.images.webp.image_url}
+                                                                src={char.character.images.webp.image_url || '../../../../public/not-found-img.jpg'}
                                                                 alt={char.character.name}
                                                                 height={64}
                                                                 width={64}
@@ -152,7 +155,7 @@ export default async function DetailAnime({ params: { id } }) {
                                                         )}
                                                         <div className="text-start">
                                                             <p className="font-semibold hover:text-sky-600 text-white lg:text-lg text-sm">{char.character?.name || 'Unknown Character'}</p>
-                                                            <p className="text-base text-gray-300">{char.role}</p>
+                                                            <p className="text-base text-gray-300">{char.role || 'Unknown Role'}</p>
                                                         </div>
                                                     </div>
                                                 </Link>
@@ -166,7 +169,7 @@ export default async function DetailAnime({ params: { id } }) {
                                                         {japaneseVoiceActor.person?.images?.jpg?.image_url && (
                                                             <Image
                                                                 src={japaneseVoiceActor.person.images.jpg.image_url}
-                                                                alt={japaneseVoiceActor.person.name || "Image Not Found"}
+                                                                alt={japaneseVoiceActor.person.name || '../../../../public/not-found-img.jpg'}
                                                                 height={64}
                                                                 width={64}
                                                                 className="w-24 lg:w-24 lg:h-24 h-24 object-cover"
