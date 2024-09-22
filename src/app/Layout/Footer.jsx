@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <div className="footer bg-blue-navy py-5 w-full flex justify-center items-center">
             <div className="flex flex-col justify-center items-center text-center">
-                <b className="text-white">Made With ❤️ By <Link href="https://www.instagram.com/fransisco.in" className="hover:text-blue-500"> Fransisco </Link></b>
+                <b className="text-white text-lg">Made With ❤️ By <Link href="https://www.instagram.com/fransisco.in" className="hover:text-blue-500"> Fransisco </Link></b>
                 <div className="flex justify-center items-center gap-3 mt-3">
                     <Link href="https://www.facebook.com/AverangeFransis" className="text-white rounded-full p-1" target="_blank">
                         <div className="bg-test p-1 rounded-full">

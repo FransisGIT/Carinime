@@ -1,5 +1,4 @@
 import { ApiAnime } from '@/lib/api';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 
@@ -17,7 +16,7 @@ export default async function DetailAnime({ params: { id } }) {
 
                 <div className="flex flex-col col-span-2 lg:flex-row m-5 gap-5">
                     <div className="flex-none lg:w-[20%] md:w-[30%] w-full relative lg:mt-[-100px] md:mt-[-100px] mt-[-350px] m-auto">
-                        <Image src={detailAnime.data.images.webp.large_image_url} alt={detailAnime.data.title} height={350} width={350} className="w-52 m-auto rounded-[18px] hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300"></Image>
+                        <img src={detailAnime.data.images.webp.large_image_url} alt={detailAnime.data.title} height={350} width={350} className="w-52 m-auto rounded-[18px] hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300"></img>
                     </div>
                     <div className="flex-none lg:max-w-[80%]">
                         <h1 className="lg:text-3xl md:text-3xl sm:text-3xl text-3xl font-bold text-white mb-5 hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 lg:flex lg:justify-start text-center">{detailAnime.data.title}</h1>
@@ -63,6 +62,7 @@ export default async function DetailAnime({ params: { id } }) {
                                 : null
                             }
                         </div>
+                        <p className="text-white hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 text-2xl mb-2">Synopsis</p>
                         <p className=" text-white hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 text-base">{detailAnime.data.synopsis}</p>
                     </div>
                 </div>
@@ -70,6 +70,7 @@ export default async function DetailAnime({ params: { id } }) {
                 <div className="flex flex-col col-span-2 lg:flex-row m-5 gap-5 mt-10">
                     <div className="flex-none lg:w-[20%] md:w-full w-full">
                         <div className="bg-blue-navy rounded-[18px] py-3">
+                            <p className="text-white hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 text-lg m-5">Detail Anime</p>
                             <div className="flex flex-row lg:flex-wrap lg:flex-col flex-initial overflow-x-auto m-5 gap-3">
                                 <div className="font-bold text-base lg:text-lg text-white whitespace-nowrap lg:whitespace-normal">
                                     Rating <br />
@@ -135,6 +136,7 @@ export default async function DetailAnime({ params: { id } }) {
                     <div className="flex-initial lg:max-w-[80%]">
                         <div className="flex flex-col col-span-2 lg:flex-row gap-5">
                             <div>
+                                <p className="text-white hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 text-lg m-5">Characters/Voice Actors</p>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     {detailChar.data?.map((char) => {
                                         const japaneseVoiceActor = char.voice_actors?.find(actor => actor.language === 'Japanese');
@@ -145,7 +147,7 @@ export default async function DetailAnime({ params: { id } }) {
                                                 <Link href={char.character.url}>
                                                     <div className="flex items-center gap-4">
                                                         {char.character?.images.webp.image_url && (
-                                                            <Image
+                                                            <img
                                                                 src={char.character.images.webp.image_url || '../../../../public/not-found-img.jpg'}
                                                                 alt={char.character.name}
                                                                 height={64}
@@ -167,7 +169,7 @@ export default async function DetailAnime({ params: { id } }) {
                                                             <p className="text-base text-gray-300">{japaneseVoiceActor.language || 'Unknown'}</p>
                                                         </div>
                                                         {japaneseVoiceActor.person?.images?.jpg?.image_url && (
-                                                            <Image
+                                                            <img
                                                                 src={japaneseVoiceActor.person.images.jpg.image_url}
                                                                 alt={japaneseVoiceActor.person.name || '../../../../public/not-found-img.jpg'}
                                                                 height={64}
