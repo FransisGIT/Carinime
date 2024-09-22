@@ -38,7 +38,7 @@ export default function Navbar() {
     return (
         <div className="sticky top-0 z-50">
             <div
-                className={`navbar bg-test transition-all duration-300 ${isScrolled ? 'py-[6px] shadow-2xl bg-test' : 'py-[1px]'
+                className={`navbar bg-test transition-all duration-300 ${isScrolled ? 'py-[3px] shadow-2xl bg-test' : 'py-[1px]'
                     }`}
             >
                 <div className="navbar-start">
@@ -51,7 +51,7 @@ export default function Navbar() {
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-5 w-5 text-white focus:bg-transparent"
+                                className="h-5 w-5 text-white"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -69,29 +69,29 @@ export default function Navbar() {
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow bg-color-gradient1"
                         >
-                            <li className="text-2xl text-white [&.active]:text-white active: focus:text-white">
+                            <li className="text-2xl text-white">
                                 <Link href="/">Home</Link>
                             </li>
-                            <li className="text-2xl text-white [&.active]:text-white active: focus:text-white">
+                            <li className="text-2xl text-white">
                                 <Link href="/About">About</Link>
                             </li>
-                            <li className="text-2xl text-white [&.active]:text-white active: focus:text-white">
+                            <li className="text-2xl text-white">
                                 <Link href="/Contact">Contact</Link>
                             </li>
                         </ul>
                         )}
                     </div>
-                    <Link href="/" className="btn btn-ghost lg:text-xl md:text-xl text-lg text-white focus:bg-transparent">CARINIME</Link>
+                    <Link href="/" className="btn btn-ghost lg:text-xl lg:text-md text-sm text-white">CARINIME</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li className="text-xl gap-3 text-white [&.active]:text-white active: focus:text-white">
+                        <li className="text-xl gap-3 text-white">
                             <Link href="/">Home</Link>
                         </li>
-                        <li className="text-xl gap-3 text-white [&.active]:text-white active: focus:text-white">
+                        <li className="text-xl gap-3 text-white">
                             <Link href="/About">About</Link>
                         </li>
-                        <li className="text-xl gap-3 text-white [&.active]:text-white active: focus:text-white">
+                        <li className="text-xl gap-3 text-white">
                             <Link href="/Contact">Contact</Link>
                         </li>
                     </ul>
@@ -103,7 +103,7 @@ export default function Navbar() {
                             ref={searchInputRef}
                             onKeyDown={handleSearch}
                             placeholder="Search Anime"
-                            className="input input-bordered lg:w-[300px] md:w-[290px] w-[10rem] bg-test text-white border-white [&.active]:text-white active: focus:text-white"
+                            className="input input-bordered lg:w-[300px] md:w-[290px] w-[10rem] bg-test text-whiteborder-white [&.active]:text-white active: focus:text-white"
                         />
                         <MagnifyingGlass size={32} weight="bold" className="text-white relative bottom-10 lg:ml-64 md:ml-[240px] ml-[120px] cursor-pointer" onClick={handleSearch} />
                     </div>

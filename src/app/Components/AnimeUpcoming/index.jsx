@@ -12,7 +12,7 @@ export default function AnimeUpcoming({ api }) {
                 {api.data?.map((data) => (
                     <Link href={`/DetailAnime/${data.mal_id}`} key={data.mal_id}>
                         <div className="flex ml-4 mb-5">
-                            <img
+                            <Image
                                 src={data.images.webp.large_image_url || '../../public/not-found-img.jpg'
                                 }
                                 className="w-[70px] hover:shadow-2xl hover:shadow-indigo-500 transition-all duration-300 rounded-[12px] h-24"
