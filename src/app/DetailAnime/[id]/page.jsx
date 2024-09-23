@@ -62,8 +62,27 @@ export default async function DetailAnime({ params: { id } }) {
                                 : null
                             }
                         </div>
-                        <p className="text-white hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 text-2xl mb-2">Synopsis</p>
-                        <p className=" text-white hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 text-base">{detailAnime.data.synopsis}</p>
+                        <div className="my-3">
+                            <p className="text-white hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 text-2xl mb-2">Synopsis</p>
+                            <p className=" text-white hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 text-base">{detailAnime.data.synopsis}</p>
+                        </div>
+
+                        <div className="my-3">
+                            <p className="text-white hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 text-2xl mb-2">Trailer</p>
+                            {detailAnime?.data?.trailer?.embed_url ? (
+                                <div className="video-trailer p-3 flex justify-center flex-wrap items-center">
+                                    <iframe
+                                        src={detailAnime.data.trailer.embed_url}
+                                        width="850"
+                                        height="350"
+                                        title={detailAnime.data.title}
+                                        frameBorder="0"
+                                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                            ) : null}
+                        </div>
                     </div>
                 </div>
 
@@ -136,53 +155,82 @@ export default async function DetailAnime({ params: { id } }) {
                     <div className="flex-initial lg:max-w-[80%]">
                         <div className="flex flex-col col-span-2 lg:flex-row gap-5">
                             <div>
-                                <p className="text-white hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 text-lg m-5">Characters/Voice Actors</p>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    {detailChar.data?.map((char) => {
-                                        const japaneseVoiceActor = char.voice_actors?.find(actor => actor.language === 'Japanese');
+                                {detailChar.data ? (
+                                    <div>
+                                        <p className="text-white hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 text-lg m-5">
+                                            Characters/Voice Actors
+                                        </p>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            {detailChar.data.map((char) => {
+                                                const japaneseVoiceActor = char.voice_actors?.find(actor => actor.language === 'Japanese');
 
-                                        if (!japaneseVoiceActor) return null;
-                                        return (
-                                            <div className="flex items-center justify-between p-0 bg-blue-navy rounded-md gap-5 mx-5 hover:shadow-lg hover:scale-105 hover:shadow-indigo-500 transition-all duration-300" key={char.character?.mal_id}>
-                                                <Link href={char.character.url}>
-                                                    <div className="flex items-center gap-4">
-                                                        {char.character?.images.webp.image_url && (
-                                                            <img
-                                                                src={char.character.images.webp.image_url || '../../../../public/not-found-img.jpg'}
-                                                                alt={char.character.name}
-                                                                height={64}
-                                                                width={64}
-                                                                className="w-24 lg:w-24 lg:h-24 h-24 object-cover"
-                                                            />
-                                                        )}
-                                                        <div className="text-start">
-                                                            <p className="font-semibold hover:text-sky-600 text-white lg:text-lg text-sm">{char.character?.name || 'Unknown Character'}</p>
-                                                            <p className="text-base text-gray-300">{char.role || 'Unknown Role'}</p>
-                                                        </div>
-                                                    </div>
-                                                </Link>
+                                                // If no Japanese voice actor is found, the character stays behind the scenes
+                                                if (!japaneseVoiceActor) return null;
 
-                                                <Link href={japaneseVoiceActor.person.url}>
-                                                    <div className="flex items-center gap-4">
-                                                        <div className="text-end">
-                                                            <p className="font-semibold hover:text-sky-600 text-white lg:text-lg text-sm">{japaneseVoiceActor.person?.name || 'Unknown Seiyuu'}</p>
-                                                            <p className="text-base text-gray-300">{japaneseVoiceActor.language || 'Unknown'}</p>
-                                                        </div>
-                                                        {japaneseVoiceActor.person?.images?.jpg?.image_url && (
-                                                            <img
-                                                                src={japaneseVoiceActor.person.images.jpg.image_url}
-                                                                alt={japaneseVoiceActor.person.name || '../../../../public/not-found-img.jpg'}
-                                                                height={64}
-                                                                width={64}
-                                                                className="w-24 lg:w-24 lg:h-24 h-24 object-cover"
-                                                            />
-                                                        )}
+                                                // Preparing the character and voice actor for the spotlight
+                                                return (
+                                                    <div className="flex items-center justify-between p-0 bg-blue-navy rounded-md gap-5 mx-5 hover:shadow-lg hover:scale-105 hover:shadow-indigo-500 transition-all duration-300" key={char.character?.mal_id}>
+                                                        <Link href={char.character.url}>
+                                                            <div className="flex items-center gap-4">
+                                                                {char.character?.images?.webp?.image_url ? (
+                                                                    <img
+                                                                        src={char.character.images.webp.image_url}
+                                                                        alt={char.character.name}
+                                                                        height={64}
+                                                                        width={64}
+                                                                        className="w-24 lg:w-24 lg:h-24 h-24 object-cover"
+                                                                    />
+                                                                ) : (
+                                                                    <img
+                                                                        src="/not-found-img.jpg"
+                                                                        alt="Image not available"
+                                                                        height={64}
+                                                                        width={64}
+                                                                        className="w-24 lg:w-24 lg:h-24 h-24 object-cover"
+                                                                    />
+                                                                )}
+                                                                <div className="text-start">
+                                                                    <p className="font-semibold hover:text-sky-600 text-white lg:text-lg text-sm">
+                                                                        {char.character?.name || 'Unknown Character'}
+                                                                    </p>
+                                                                    <p className="text-base text-gray-300">{char.role || 'Unknown Role'}</p>
+                                                                </div>
+                                                            </div>
+                                                        </Link>
+
+                                                        <Link href={japaneseVoiceActor.person.url}>
+                                                            <div className="flex items-center gap-4">
+                                                                <div className="text-end">
+                                                                    <p className="font-semibold hover:text-sky-600 text-white lg:text-lg text-sm">
+                                                                        {japaneseVoiceActor.person?.name || 'Unknown Seiyuu'}
+                                                                    </p>
+                                                                    <p className="text-base text-gray-300">{japaneseVoiceActor.language || 'Unknown'}</p>
+                                                                </div>
+                                                                {japaneseVoiceActor.person?.images?.jpg?.image_url ? (
+                                                                    <img
+                                                                        src={japaneseVoiceActor.person.images.jpg.image_url}
+                                                                        alt={japaneseVoiceActor.person.name}
+                                                                        height={64}
+                                                                        width={64}
+                                                                        className="w-24 lg:w-24 lg:h-24 h-24 object-cover"
+                                                                    />
+                                                                ) : (
+                                                                    <img
+                                                                        src="/not-found-img.jpg"
+                                                                        alt="Image not available"
+                                                                        height={64}
+                                                                        width={64}
+                                                                        className="w-24 lg:w-24 lg:h-24 h-24 object-cover"
+                                                                    />
+                                                                )}
+                                                            </div>
+                                                        </Link>
                                                     </div>
-                                                </Link>
-                                            </div>
-                                        );
-                                    })}
-                                </div>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                ) : null}
                             </div>
                         </div>
                     </div>
