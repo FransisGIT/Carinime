@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 import Navbar from "./Layout/Navbar";
 import Footer from "./Layout/Footer";
@@ -14,7 +15,7 @@ const geistMono = localFont({
 export const metadata = {
     title: "Carinime",
     description: "Explore the latest and most popular anime shows and movies. Watch your favorite anime series online in HD, stay updated with new releases, and join a passionate community of anime fans.",
-    keywords: "anime, watch anime, best anime, new anime, popular anime, anime shows, anime movies, Carinime, Fransisco, anim, ani, nime, anilist,anime list, anim list",
+    keywords: "anime, watch anime, best anime, new anime, popular anime, anime shows, anime movies, Carinime, Fransisco, anim, ani, nime, anilist,anime list, anim list carinime, Cari nime,  carinim",
     author: "Fransisco",
     canonical: "https://www.carinime.com",
     robots: "index, follow",
@@ -64,6 +65,7 @@ export default function RootLayout({ children }) {
                         {children}
                     </main>
                     <Analytics />
+                    <SpeedInsights />
                     <Footer />
                 </body>
             </html>
