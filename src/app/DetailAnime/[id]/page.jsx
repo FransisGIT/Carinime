@@ -67,9 +67,9 @@ export default async function DetailAnime({ params: { id } }) {
                             <p className=" text-white hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 text-base">{detailAnime.data.synopsis}</p>
                         </div>
 
-                        <div className="my-3">
-                            <p className="text-white hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 text-2xl mb-2">Trailer</p>
-                            {detailAnime?.data?.trailer?.embed_url ? (
+                        {detailAnime?.data?.trailer?.embed_url ? (
+                            <div className="my-3">
+                                <p className="text-white hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 text-2xl mb-2">Trailer</p>
                                 <div className="video-trailer p-3 flex justify-center flex-wrap items-center">
                                     <iframe
                                         src={detailAnime.data.trailer.embed_url}
@@ -81,8 +81,8 @@ export default async function DetailAnime({ params: { id } }) {
                                         allowFullScreen
                                     ></iframe>
                                 </div>
-                            ) : null}
-                        </div>
+                            </div>
+                        ) : null}
                     </div>
                 </div>
 
