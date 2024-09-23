@@ -20,7 +20,7 @@ export const metadata = {
       "anime", "watch anime","best anime","new anime","popular anime","anime shows","anime movies","Carinime","Fransisco","anim","ani","nime","anilist","anime list","anim list carinime","Cari nime","carinim",
     ],
     authors: [{ name: "Fransisco" }],
-    canonical: "https://www.carinime.vercel.app",
+    canonical: "https://carinime.vercel.app",
     robots: {
       index: true,
       follow: true,
@@ -29,11 +29,11 @@ export const metadata = {
       title: "Carinime",
       description:
         "Explore the latest and most popular anime shows and movies. Join a passionate community of anime fans.",
-      url: "https://www.carinime.vercel.app",
+      url: "https://carinime.vercel.app",
       type: "website",
       images: [
         {
-          url: "https://www.carinime.vercel.app/icon.png",
+          url: "https://carinime.vercel.app/icon.png",
           width: 1200,
           height: 630,
           alt: "Carinime",
@@ -46,7 +46,7 @@ export const metadata = {
       title: "Carinime",
       description:
         "Explore the latest and most popular anime shows and movies. Join a passionate community of anime fans.",
-      images: ["https://www.carinime.vercel.app/icon.png"],
+      images: ["https://carinime.vercel.app/icon.png"],
     },
   };
 
