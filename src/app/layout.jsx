@@ -20,7 +20,7 @@ export const metadata = {
       "anime", "watch anime","best anime","new anime","popular anime","anime shows","anime movies","Carinime","Fransisco","anim","ani","nime","anilist","anime list","anim list carinime","Cari nime","carinim",
     ],
     authors: [{ name: "Fransisco" }],
-    canonical: "https://www.carinime.com",
+    canonical: "https://www.carinime.vercel.app",
     robots: {
       index: true,
       follow: true,
@@ -29,11 +29,11 @@ export const metadata = {
       title: "Carinime",
       description:
         "Explore the latest and most popular anime shows and movies. Join a passionate community of anime fans.",
-      url: "https://www.carinime.com",
+      url: "https://www.carinime.vercel.app",
       type: "website",
       images: [
         {
-          url: "https://www.carinime.com/images/icon.png",
+          url: "https://www.carinime.vercel.app/icon.png",
           width: 1200,
           height: 630,
           alt: "Carinime",
@@ -46,7 +46,7 @@ export const metadata = {
       title: "Carinime",
       description:
         "Explore the latest and most popular anime shows and movies. Join a passionate community of anime fans.",
-      images: ["https://www.carinime.com/images/icon.png"],
+      images: ["https://www.carinime.vercel.app/icon.png"],
     },
   };
 
@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
             <html lang="en">
                 <head>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                    <link rel="shortcut icon" href={"/image/icon.png"} type="image/x-icon" />
+                    <link rel="shortcut icon" href={"/icon.png"} type="image/x-icon" />
                 </head>
                 <body className={`${geistMono.variable}`}>
                     <NextTopLoader color="#2299DD"
