@@ -23,7 +23,6 @@ export default function AnimeRecommend({ api }) {
                                 key={data.mal_id}
                             >
                                 <div className="relative group hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300 rounded-[18px]">
-                                    {/* Image */}
                                     <img
                                         src={data.images.webp.large_image_url || '../../../../public/not-found-img.jpg'}
                                         alt={data.title || 'Anime Image'}
@@ -32,7 +31,7 @@ export default function AnimeRecommend({ api }) {
                                         className="w-full lg:min-h-52 md:min-h-52 sm:min-h-52 min-h-52 object-cover rounded-[24px]"
                                     />
 
-                                    <div className="a   bsolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 z-10 rounded-[18px]">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 z-10 rounded-[18px]">
                                     </div>
 
                                     <div className="absolute bottom-0 left-0 w-full p-2 z-20 text-center">
