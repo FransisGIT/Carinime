@@ -6,10 +6,8 @@ import Navbar from "./Layout/Navbar";
 import Footer from "./Layout/Footer";
 import NextTopLoader from "nextjs-toploader";
 
-const geistMono = localFont({
-    src: "./fonts/GeistMonoVF.woff",
-    variable: "--font-geist-mono",
-    weight: "100 900",
+const Yokelvision = localFont({
+    src: './fonts/Yokelvision-J6yx.ttf',
 });
 
 export const metadata = {
@@ -17,7 +15,7 @@ export const metadata = {
     description:
         "Explore the latest and most popular anime shows and movies. Watch your favorite anime series online in HD, stay updated with new releases, and join a passionate community of anime fans.",
     keywords: [
-        "anime", "watch anime", "best anime", "new anime", "popular anime", "anime shows", "anime movies", "Carinime", "Fransisco", "anim", "ani", "nime", "anilist", "anime list", "anim list carinime", "Cari nime", "carinim",
+        "anime", "watch anime", "best anime", "new anime", "popular anime", "anime shows", "anime movies", "Carinime", "Fransisco", "anim", "ani", "nime", "anilist", "anime list", "anim list carinime", "Cari nime", "carinim", "cari anime", "list anime", "lihat anime"
     ],
     authors: [{ name: "Fransisco" }],
     canonical: "https://carinime.vercel.app",
@@ -60,7 +58,7 @@ export default function RootLayout({ children }) {
                     <meta name="revisit-after" content="1 days"></meta>
                     <link rel="shortcut icon" href={"/icon.png"} type="image/x-icon" />
                 </head>
-                <body className={`${geistMono.variable}`}>
+                <body className={`${Yokelvision.className}`}>
                     <NextTopLoader color="#2299DD"
                         initialPosition={0.08}
                         crawlSpeed={200}

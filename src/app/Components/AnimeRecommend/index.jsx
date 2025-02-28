@@ -35,7 +35,7 @@ export default function AnimeRecommend({ api }) {
                                     </div>
 
                                     <div className="absolute bottom-0 left-0 w-full p-2 z-20 text-center">
-                                        <p className="text-center font-bold md:text-sm text-sm text-white text-shadow-costum">
+                                        <p className="text-center md:text-lg text-2xl text-white text-shadow-costum font-outline-1 font-normal">
                                             {data.title}
                                         </p>
                                     </div>

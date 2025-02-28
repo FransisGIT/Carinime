@@ -31,10 +31,8 @@ export default function AnimePopular() {
                         <Link
                             href={`/DetailAnime/${data.mal_id}`}
                             className="cursor-pointer p-2 px-1"
-                            key={data.mal_id}
-                        >
+                            key={data.mal_id}>
                             <div className="relative group hover:shadow-2xl hover:scale-105 hover:shadow-indigo-500 transition-all duration-300 rounded-[18px]">
-
                                 <img
                                     src={data.images.webp.large_image_url || '../../../../public/not-found-img.jpg'}
                                     alt={data.title || 'Anime Image'}

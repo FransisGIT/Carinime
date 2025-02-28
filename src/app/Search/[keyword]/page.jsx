@@ -33,14 +33,14 @@ export default async function Search({ params }) {
                                 </div>
 
                                 <div className="absolute bottom-0 left-0 w-full p-2 z-20 text-center">
-                                    <p className="text-center font-bold md:text-sm text-xs text-white text-shadow-costum">
+                                    <p className="text-center font-normal md:text-lg text-2xl text-white text-shadow-costum font-outline-1">
                                         {data.title}
                                     </p>
                                     <hr />
-                                    <p className="text-center font-bold md:text-sm text-xs text-white text-shadow-costum">
+                                    <p className="text-center font-normal md:text-base text-lg text-white text-shadow-costum">
                                         Score: {data.score}
                                     </p>
-                                    <p className="text-center font-bold md:text-sm text-xs text-white text-shadow-costum">
+                                    <p className="text-center font-normal md:text-base text-lg text-white text-shadow-costum">
                                         Episode: {data.episodes}
                                     </p>
                                 </div>

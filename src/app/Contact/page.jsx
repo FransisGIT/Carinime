@@ -6,7 +6,7 @@ export default function Contact() {
         <>
             <div className="h-full py-[110px]">
                 <div className="py-5 px-5 lg:mx-[300px] mx-[20px] bg-blue-navy rounded-[24px]">
-                    <div className="m-auto text-lg text-white font-semibold text-center">
+                    <div className="m-auto text-lg text-white font-normal text-center">
                         My social media
                     </div>
                     <div className="flex flex-row justify-center items-center">

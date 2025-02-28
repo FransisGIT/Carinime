@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+    .font-outline-1 {
+        -webkit-text-stroke: 1px black;
+      }
+      .font-outline-4 {
+        -webkit-text-stroke: 4px black;
+      }
+
     :root {
         --background: 0 0% 100%;
         --foreground: 222.2 84% 4.9%;

@@ -65,33 +65,33 @@ export default function Navbar() {
                             </svg>
                         </div>
                         {isDropdownOpen && (
-                        <ul
-                            tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow bg-color-gradient1"
-                        >
-                            <li className="text-2xl text-white [&.active]:text-white active: focus:text-white">
-                                <Link href="/">Home</Link>
-                            </li>
-                            <li className="text-2xl text-white [&.active]:text-white active: focus:text-white">
-                                <Link href="/About">About</Link>
-                            </li>
-                            <li className="text-2xl text-white [&.active]:text-white active: focus:text-white">
-                                <Link href="/Contact">Contact</Link>
-                            </li>
-                        </ul>
+                            <ul
+                                tabIndex={0}
+                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow bg-color-gradient1"
+                            >
+                                <li className="text-2xl text-white [&.active]:text-white active: focus:text-white">
+                                    <Link href="/">Home</Link>
+                                </li>
+                                <li className="text-2xl text-white [&.active]:text-white active: focus:text-white">
+                                    <Link href="/About">About</Link>
+                                </li>
+                                <li className="text-2xl text-white [&.active]:text-white active: focus:text-white">
+                                    <Link href="/Contact">Contact</Link>
+                                </li>
+                            </ul>
                         )}
                     </div>
-                    <Link href="/" className="btn btn-ghost lg:text-xl md:text-xl text-lg text-white focus:bg-transparent">CARINIME</Link>
+                    <Link href="/" className="btn btn-ghost lg:text-3xl md:text-2xl text-3xl font-normal text-white focus:bg-transparent font-outline-1">CARINIME</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li className="text-xl gap-3 text-white [&.active]:text-white active: focus:text-white">
+                        <li className="text-2xl gap-3 text-white [&.active]:text-white active: focus:text-white font-normal">
                             <Link href="/">Home</Link>
                         </li>
-                        <li className="text-xl gap-3 text-white [&.active]:text-white active: focus:text-white">
+                        <li className="text-2xl gap-3 text-white [&.active]:text-white active: focus:text-white font-normal">
                             <Link href="/About">About</Link>
                         </li>
-                        <li className="text-xl gap-3 text-white [&.active]:text-white active: focus:text-white">
+                        <li className="text-2xl gap-3 text-white [&.active]:text-white active: focus:text-white font-normal">
                             <Link href="/Contact">Contact</Link>
                         </li>
                     </ul>
@@ -103,7 +103,7 @@ export default function Navbar() {
                             ref={searchInputRef}
                             onKeyDown={handleSearch}
                             placeholder="Search Anime"
-                            className="input input-bordered lg:w-[300px] md:w-[290px] w-[10rem] bg-test text-white border-white [&.active]:text-white active: focus:text-white"
+                            className="input input-bordered lg:w-[300px] md:w-[290px] w-[10rem] bg-test text-white border-white [&.active]:text-white active: focus:text-white font-normal"
                         />
                         <MagnifyingGlass size={32} weight="bold" className="text-white relative bottom-10 lg:ml-64 md:ml-[240px] ml-[120px] cursor-pointer" onClick={handleSearch} />
                     </div>

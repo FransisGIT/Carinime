@@ -8,7 +8,7 @@ export default function AnimeUpcoming({ api }) {
     return (
         <div>
             <>
-                <SparklesText text="Top Upcoming Anime" className="ml-4 mt-1 mb-6 lg:text-lg md:text-2xl sm:text-lg text-lg hover:text-indigo-500 transition-all text-white"></SparklesText>
+                <SparklesText text="Top Upcoming Anime" className="ml-4 mt-1 mb-6 lg:text-3xl md:text-2xl sm:text-lg text-lg hover:text-indigo-500 transition-all text-white font-outline-1 font-normal"></SparklesText>
                 {api.data?.map((data) => (
                     <Link href={`/DetailAnime/${data.mal_id}`} key={data.mal_id}>
                         <div className="flex ml-4 mb-5">
@@ -21,7 +21,7 @@ export default function AnimeUpcoming({ api }) {
                                 height={350}
                             />
                             <div className="text-white px-3">
-                                <p className="md:text-base lg:text-base xl:text-base font-bold mb-1 hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 rounded-lg">
+                                <p className="md:text-base lg:text-base xl:text-base mb-1 hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300 rounded-lg">
                                     {data.title}
                                 </p>
                                 <p className="hover:text-shadow-lg hover:shadow-indigo-500 transition-all duration-300">

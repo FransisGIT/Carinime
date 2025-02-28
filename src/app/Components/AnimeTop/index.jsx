@@ -26,14 +26,14 @@ export default function AnimeTop({ api }) {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 z-10 rounded-[18px]"></div>
 
                                     <div className="absolute bottom-0 left-0 w-full p-2 z-20 text-center">
-                                        <p className="text-center font-bold md:text-sm text-sm text-white text-shadow-costum">
+                                        <p className="text-center md:text-sm lg:text-lg text-2xl text-white text-shadow-costum font-outline-1 font-normal">
                                             {topAnime.title}
                                         </p>
                                         <hr className="border-gray-300 my-1" />
-                                        <p className="text-center font-bold md:text-sm text-sm text-white text-shadow-costum">
+                                        <p className="text-center font-normal md:text-sm text-sm text-white text-shadow-costum ">
                                             Score: {topAnime.score}
                                         </p>
-                                        <p className="text-center font-bold md:text-sm text-sm text-white text-shadow-costum">
+                                        <p className="text-center font-normal md:text-sm text-sm text-white text-shadow-costum">
                                             Episode: {topAnime.episodes}
                                         </p>
                                     </div>
